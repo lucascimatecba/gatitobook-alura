@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Animais } from '../animais';
 
 @Component({
   selector: 'app-grade-fotos-animais',
@@ -6,5 +7,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./grade-fotos-animais.component.css']
 })
 export class GradeFotosAnimaisComponent {
+
+  @Input() animais !: Animais;
 
 }

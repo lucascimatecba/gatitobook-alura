@@ -1,1 +1,12 @@
-<p>grade-fotos-animais works!</p>
+<p class="text-center text-muted" *ngIf="!animais.length">Desculpe. Não há animais.</p>
+
+<div class="row">
+  <div class="col-4" *ngFor="let animal of animais">
+    <a [routerLink]="['/animais', animal.id]"></a>
+    <app-cartao>
+      <app-animal [url]="animal.url" [descricao]="animal.description"></app-animal>
+      <i class="far fa-heart me-2" aria-hidden="true">{{animal.likes}}</i>
+      <i class="far fa-comment me-2 ms-2" aria-hidden="true">{{animal.comments}}</i>
+    </app-cartao>
+  </div>
+</div>
